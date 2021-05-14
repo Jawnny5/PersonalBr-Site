@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 import { IconContext } from "react-icons"
 import { FaTwitch } from 'react-icons/fa'
@@ -12,6 +13,8 @@ import { theme } from '../tailwind.config'
 
 
 export default function Home() {
+  const [menuHover, setMenuHover] = useState(false)
+
   return (
     <div className="flex flex-col items-center justify-evenly min-h-screen py-2 bg-blue">
       <Head className="">
@@ -29,7 +32,10 @@ export default function Home() {
         </button>
         
 
-        <p className="mt-1 mr-8 text-2xl bg-brown border-8 border-brown rounded-full">
+        <p className={`${menuHover && "animate-spin"} mt-1 mr-8 text-2xl bg-brown 
+          border-8 border-brown rounded-full`} 
+          onMouseEnter={() => setMenuHover(true)}
+          onMouseLeave={() => setMenuHover(false)}>
             <FaBars size="2em" color="green" />
         </p>
       </main>
