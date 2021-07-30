@@ -26,8 +26,7 @@ export default function MenuModal() {
         <li>
           Contact
         </li>
-          </Link>
-        
+          </Link> 
       </ul>
     </Portal>
   )
