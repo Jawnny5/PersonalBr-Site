@@ -12,7 +12,7 @@ class MyDocument extends Document {
         <Head />
         <body>
           <Main />
-          <div id="MenuModal" />
+          <div id="MenuModal" className="MenuModal"/>
           <NextScript />
         </body>
       </Html>
