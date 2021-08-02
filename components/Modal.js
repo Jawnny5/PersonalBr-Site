@@ -1,7 +1,8 @@
-import { useState } from "react";
 import Portal from "./Portal";
 import Link from "next/link";
+import { useState } from "react";
 import { FaBars } from "react-icons/fa";
+import { theme } from '../tailwind.config'
 
 export default function Modal() {
   const [open, setOpen] = useState();
@@ -11,23 +12,23 @@ export default function Modal() {
   const modalBox = 
     <Portal selector="#MenuModal">
     <div className="backdrop">
-      <div className="modal">
+      <div className="modal bg-brown">
         <ul>
-          <Link href="">
-            <li>About Me</li>
+          <Link href="/about">
+            <li className="cursor-pointer">About Me</li>
           </Link>
-          <Link href="">
-            <li>Blog</li>
+          <Link href="https://wln-develops.medium.com/">
+            <li className="cursor-pointer">Blog</li>
           </Link>
-          <Link href="">
-            <li>Work</li>
+          <Link href="https://github.com/Jawnny5">
+            <li className="cursor-pointer">Work</li>
           </Link>
-          <Link href="">
-            <li>Contact</li>
+          <Link href="https://www.linkedin.com/in/william-neal1283/">
+            <li className="cursor-pointer">Contact</li>
           </Link>
         </ul>
         <button type="button" onClick={() => setOpen(false)}>
-          Close Modal
+          Close 
         </button>
       </div>
       <style jsx>{`
@@ -45,10 +46,10 @@ export default function Modal() {
         .modal {
           background-color: white;
           position: absolute;
-          top: 10%;
-          right: 10%;
-          bottom: 10%;
-          left: 10%;
+          top: 15%;
+          right: 33%;
+          bottom: 15%;
+          left: 33%;
           padding: 1em;
           height: ;
         }

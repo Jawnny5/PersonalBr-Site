@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Modal, { handleModal } from '../components/Modal'
-import useModal from '../hooks/useModal'
 import { useState } from 'react'
 import { FaTwitch } from 'react-icons/fa'
 import { FaBars } from 'react-icons/fa'
@@ -14,9 +13,7 @@ import { theme } from '../tailwind.config'
 
 export default function Home() {
   const [menuHover, setMenuHover] = useState(false)
-  const {open, openModal, closeModal } = useModal()
   const [showModal, setShowModal] = useState(true)
-  
   
   const handleClick = () => {
     setShowModal(true) 
@@ -25,8 +22,9 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-evenly min-h-screen py-2 bg-blue">
       <Head className="">
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>WLN Develops</title>
+        <link rel="icon" 
+        href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/google/110/victory-hand_emoji-modifier-fitzpatrick-type-5_270c-1f3fe_1f3fe.png" />
       </Head>
 
       <main className="flex flex-row mb-2 w-full justify-between" >

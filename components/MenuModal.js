@@ -19,7 +19,7 @@ export default function MenuModal() {
           </Link>
           <Link href="">
         <li>
-          Work
+          Work 
         </li>
           </Link>
           <Link href="">
