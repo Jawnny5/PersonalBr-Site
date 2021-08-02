@@ -1,6 +1,7 @@
 import Portal from "./Portal";
 import Link from "next/link";
 import { useState } from "react";
+import { FaWindowClose } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
 import { theme } from '../tailwind.config'
 
@@ -12,23 +13,23 @@ export default function Modal() {
   const modalBox = 
     <Portal selector="#MenuModal">
     <div className="backdrop">
-      <div className="modal bg-brown">
-        <ul>
+      <div className="modal" color={theme.colors.brown}>
+        <ul className="flex flex-col justify-evenly">
           <Link href="/about">
-            <li className="cursor-pointer">About Me</li>
+            <li className="cursor-pointer my-12 text-3xl">About Me</li>
           </Link>
           <Link href="https://wln-develops.medium.com/">
-            <li className="cursor-pointer">Blog</li>
+            <li className="cursor-pointer my-12 text-3xl">Blog</li>
           </Link>
           <Link href="https://github.com/Jawnny5">
-            <li className="cursor-pointer">Work</li>
+            <li className="cursor-pointer my-12 text-3xl">Work</li>
           </Link>
           <Link href="https://www.linkedin.com/in/william-neal1283/">
-            <li className="cursor-pointer">Contact</li>
+            <li className="cursor-pointer my-12 text-3xl">Contact</li>
           </Link>
         </ul>
         <button type="button" onClick={() => setOpen(false)}>
-          Close 
+         <FaWindowClose size="2em"/>
         </button>
       </div>
       <style jsx>{`
@@ -44,7 +45,10 @@ export default function Modal() {
           left: 0;
         }
         .modal {
-          background-color: white;
+          text-align: center;
+          justify-content: center;
+          color: hsl(190, 86%, 88%);
+          background-color: hsl(46, 19%, 30%);
           position: absolute;
           top: 15%;
           right: 33%;

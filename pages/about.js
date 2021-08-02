@@ -1,3 +1,9 @@
-export default function About() {
-  return <h1>About Me</h1>
+import React from 'react'
+
+export default function about() {
+  return (
+    <div>
+      Under Construction
+    </div>
+  )
 }
