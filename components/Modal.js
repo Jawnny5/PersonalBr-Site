@@ -22,7 +22,7 @@ export default function Modal() {
             <li className="cursor-pointer my-12 text-3xl">Blog</li>
           </Link>
           <Link href="https://github.com/Jawnny5">
-            <li className="cursor-pointer my-12 text-3xl">Work</li>
+            <li className="cursor-pointer my-12 text-3xl">Projects</li>
           </Link>
           <Link href="https://www.linkedin.com/in/william-neal1283/">
             <li className="cursor-pointer my-12 text-3xl">Contact</li>
